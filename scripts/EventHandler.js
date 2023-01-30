@@ -30,3 +30,28 @@ function validateForm() {
         return false;
     }
 }
+
+function validateContactForm (){
+    let firstName = document.forms["contactForm"]["firstName"].value;
+    let lastName = document.forms["contactForm"]["lastName"].value;
+    let phoneNumber = document.forms["contactForm"]["phoneNumber"].value;
+    let emailAddress = document.forms["contactForm"]["emailAddress"].value;
+    let message = document.forms["contactForm"]["message"].value;
+
+    if (firstName == "" || lastName == "") {
+        alert("Please enter your full name (first and last name)");
+        return false;
+    } else if (phoneNumber == "") {
+        alert("Please enter your phone number");
+        return false;
+    } else if (emailAddress == "") {
+        alert("Please enter your email address");
+        return false;
+    } else if (message == "") {
+        alert("Please enter a short message");
+        return false;
+    } else {
+        console.log(`First Name: ${ firstName } \nLast Name: ${ lastName } \nPhone Number: ${ phoneNumber } \nEmail: ${ emailAddress } \nMessage: ${ message }`)
+        return false;
+    }
+}
