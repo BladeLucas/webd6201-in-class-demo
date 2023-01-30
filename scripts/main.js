@@ -3,7 +3,7 @@
     function DisplayButton() {
         let randomButton = document.getElementById("RandomButton")
         randomButton.addEventListener("click", function(){
-            location.href = 'projects.html'
+            location.href = './projects.html'
         })
 
         let mainContent = document.getElementsByTagName("main")[0]
