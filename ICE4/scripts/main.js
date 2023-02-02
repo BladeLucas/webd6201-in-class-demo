@@ -31,6 +31,9 @@
         //         <p class="mt-5 lead">and... what do you this of this method?</p>
         //     </div>
         // `
+
+        let blade = new Contact("Blade Lucas", "5873419418", "blade.lucas@dcmail.ca")
+        console.log(blade.toString())
     }
 
     function Start() {
