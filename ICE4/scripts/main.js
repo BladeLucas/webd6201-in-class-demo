@@ -36,6 +36,42 @@
         console.log(blade.toString())
     }
 
+    function DisplayContactList() {
+        if (localStorage.length > 0) {
+            let contactList = document.getElementById("contactList")
+
+            let data = ""
+            let keys = Object.keys(localStorage)
+
+            let index = 1
+
+            for (const key of keys) {
+                let contactData = localStorage.getItem(key)
+                let contact = new Contact()
+                
+                contact.deserialize(contactData)
+
+                data += `<tr>
+                    <th scope="row" class="text-center">${ index }</th>
+                    <td class="text-center">${ contact.Name }</td>
+                    <td class="text-center">${ contact.ContactNumber }</td>
+                    <td class="text-center">${ contact.EmailAddress }</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                </tr>
+                `
+
+                index++
+            }
+
+            contactList.innerHTML = data
+        }
+    }
+
+    function DisplayReferences() {
+        console.log("References Page")
+    }
+
     function Start() {
         console.log("App Started!")
 
